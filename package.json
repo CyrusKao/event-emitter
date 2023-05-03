@@ -1,0 +1,43 @@
+{
+  "name": "@cyruskao/event-emitter",
+  "version": "1.0.0",
+  "description": "A type safe event emitter implementation.",
+  "keywords": [
+    "Event",
+    "Event Emitter",
+    "TypeScript"
+  ],
+  "homepage": "https://github.com/CyrusKao/event-emitter#readme",
+  "bugs": {
+    "url": "https://github.com/CyrusKao/event-emitter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CyrusKao/event-emitter.git"
+  },
+  "author": "Cyrus Kao <cyk.pvt@gmail.com>",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "test": "npm run test:type && npm run test:lint && npm run test:prettier",
+    "test:type": "tsc --noEmit",
+    "test:lint": "eslint .",
+    "test:prettier": "prettier . --check",
+    "format": "npm run format:lint && npm run format:prettier",
+    "format:lint": "eslint . --fix",
+    "format:prettier": "prettier . --write"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^18.16.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "typescript": "^5.0.4"
+  }
+}
